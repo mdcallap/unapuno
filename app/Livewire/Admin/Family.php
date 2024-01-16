@@ -26,9 +26,6 @@ class Family extends Component
     {
         $this->resetPage();
     }
-
-
-
     public function render()
     {
 
@@ -50,7 +47,6 @@ class Family extends Component
         ]);
 
         $this->closemodal();
-      /*   $this->dispatch('success','Familia creada Correctamente'); */
 
     }
 
@@ -82,8 +78,6 @@ class Family extends Component
     ]);
         $family->save();
         $this->closemodal();
-       /*  $this->dispatch('success','Cambios guardados Correctamente'); */
-
     }
 
     public function delete(ModelsFamily $familyId)
