@@ -8,6 +8,11 @@ class Home extends Component
 {
     public function render()
     {
-        return view('livewire.web.home');
+        $categories = \App\Models\Category::all();
+        $subcategories = \App\Models\Subcategory::all();
+
+        $documents= $categories->concat($subcategories);
+
+        return view('livewire.web.home',compact('documents') )->layout('layouts.web') ;
     }
 }

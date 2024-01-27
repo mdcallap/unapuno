@@ -2,6 +2,7 @@
 
 use App\Livewire\Admin\Category;
 use App\Livewire\Admin\Family;
+use App\Livewire\Admin\Post;
 use App\Livewire\Admin\Subcategory;
 use Illuminate\Support\Facades\Route;
 
@@ -25,8 +26,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
     Route::get('/areas', Family::class)->name('admin.families');
     Route::get('/subareas', Category::class)->name('admin.categories');
     Route::get('/items', Subcategory::class)->name('admin.subcategories');
+    Route::get('/publicaciones',Post::class)->name('admin.posts');
 
 });
