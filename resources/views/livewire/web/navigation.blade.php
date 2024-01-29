@@ -1,9 +1,10 @@
 <div>
     <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="{{route('web.home')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="{{asset('images/logo.jpeg')}}" class="h-8" alt="Flowbite Logo" />
                 <span
-                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SST - UNAP</span>
+                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Seguridad y Salud</span>
             </a>
             <button data-collapse-toggle="navbar-dropdown" type="button"
                 class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -19,7 +20,7 @@
                 <ul
                     class="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 md:space-x-8 md:rtl:space-x-reverse">
                     <li>
-                        <a href="#"
+                        <a href="{{route('web.home')}}"
                             class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
                             aria-current="page">Inicio</a>
                     </li>
@@ -56,7 +57,7 @@
                                             aria-labelledby="doubleDropdownButtonArea{{$item->id}}">
                                             @foreach ($item->subcategories as $items)
                                             <li>
-                                                <a href="#"
+                                                <a href="{{route('web.show.item',$items->id)}}"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> {{$items->name}}</a>
                                             </li>
                                            
@@ -84,7 +85,7 @@
 
                         <!-- Dropdown menu 1-->
                         <div id="multi-dropdown-area2"
-                            class="z-40 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                 aria-labelledby="multiLevelArea2">
                             
@@ -107,7 +108,7 @@
                                             aria-labelledby="doubleDropdownButtonArea{{$item->id}}">
                                             @foreach ($item->subcategories as $items)
                                             <li>
-                                                <a href="#"
+                                                <a href="{{route('web.show.item',$items->id)}}"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> {{$items->name}}</a>
                                             </li>
                                            
@@ -130,17 +131,17 @@
 
 
                     <li>
-                        <a href="#"
+                        <a href="{{route('web.posts')}}"
                             class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Publicaciones</a>
                     </li>
                     
                     <li>
-                        <a href="#"
+                        <a href="{{route('web.feature')}}"
                             class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nosotros</a>
                     </li>
                     
                     <li>
-                        <a href="#"
+                        <a href="{{route('web.contact')}}"
                             class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
                     </li>
                 </ul>

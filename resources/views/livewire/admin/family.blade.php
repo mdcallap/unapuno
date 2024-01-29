@@ -1,17 +1,17 @@
 <div>
-        <x-slot name="header">
-                <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                    {{ __('Areas') }}
-                </h2>
-            </x-slot>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Areas') }}
+        </h2>
+    </x-slot>
 
-                
 
-            <div class="py-12">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                        
-                        <div
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+
+                <div
                     class="px-6 flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 py-4">
                     <div class="w-full md:w-1/5">
                         <form class="flex items-center">
@@ -25,12 +25,12 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                               
+
                                 <input type="search" wire:model.live="search"
                                     class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     placeholder="Search" required="">
                             </div>
-                          
+
                         </form>
                     </div>
                     <div
@@ -66,61 +66,76 @@
                         </button>
                     </div>
                 </div>
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-    @if (count($families))
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    ID
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    NOMBRE
-                </th>
-                
-                <th scope="col" class="px-6 py-3">
-                    ACCIONES
-                </th>
-            </tr>
-        </thead>
-        <tbody>
+                    @if (count($families))
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        ID
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        NOMBRE
+                                    </th>
 
-            @foreach ($families as $item)
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{$item->id}}
-                </th>
-                <td class="px-6 py-4">
-                    {{$item->name}}
-                </td>
-               
-                <td class="px-6 py-4">
-                    <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            @endforeach
-           
-        </tbody>
-    </table>
-    @else
+                                    <th scope="col" class="px-6 py-3">
+                                        ACCIONES
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach ($families as $item)
+                                    <tr
+                                        class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{ $item->id }}
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            {{ $item->name }}
+                                        </td>
+
+                                        <td class="px-6 py-4">
+                                            <a wire:click="edit({{ $item }})" href="#"
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+
+                                            @if ($item->categories->count() == 0)
+                                                <a wire:click="delete({{ $item }})" href="#"
+                                                    wire:confirm="Estas seguro, !No podras Revertir Esta accion : Eliminar¡?"
+                                                    class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
+                                            @endif
+
+                                        </td>
+
+
+
+
+                                    </tr>
+                                @endforeach
+
+                            </tbody>
+                        </table>
+                    @else
                         <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningun registro encontrado</h6>
                     @endif
                     @if ($families->hasPages())
-                    <div class="p-6">
-                        {{ $families->links() }}
+                        <div class="p-6">
+                            {{ $families->links() }}
 
-                    </div>
-                @endif
-</div>
-    
-                    </div>
+                        </div>
+                    @endif
                 </div>
+
             </div>
+        </div>
+    </div>
 
 
-            <x-modal-form :head='$componentName="Areas"' :id='$selected_id'>
-                @include('livewire.admin.family-form')
-            </x-modal-form> 
-        
+    <x-modal-form :head='$componentName = "Areas"' :id='$selected_id'>
+        @include('livewire.admin.family-form')
+    </x-modal-form>
+
 </div>

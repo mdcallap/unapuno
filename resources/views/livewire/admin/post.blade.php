@@ -81,7 +81,13 @@
             </th>
 
             <th scope="col" class="px-6 py-3">
+                Estado
+            </th>
+            <th scope="col" class="px-6 py-3">
                 Tipo
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Archivo
             </th>
             
             <th scope="col" class="px-6 py-3">
@@ -97,11 +103,43 @@
                 {{$item->id}}
             </th>
             <td class="px-6 py-4">
-                {{$item->Title}}
+                {{$item->title}}
+            </td>
+            <td class="px-6 py-4">
+                @if ($item->status == 1)
+                <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-100">
+                    Activo
+                </span>
+                @else
+                <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-700 dark:text-red-100">
+                    Inactivo
+                </span>
+                @endif
+             
+            </td>
+            <td class="px-6 py-4">
+                @if ($item->type == 1)
+                <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-100">
+                    Documento
+                </span>
+                @else
+                <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100">
+                    Noticia
+                </span>
+                @endif
+            
+            </td>
+            <td class="px-6 py-4">
+                {{$item->file}}
             </td>
            
             <td class="px-6 py-4">
                 <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <a wire:click="delete({{ $item }})" href="#" wire:confirm="Estas seguro, !No podras Revertir Esta accion : Eliminar¡?" class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
             </td>
         </tr>
         @endforeach

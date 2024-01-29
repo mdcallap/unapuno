@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected  $fillable = ['type','title','content','file','status','subcategory_id','user_id'];
+
     public function files() {
         return $this->hasMany(File::class);        
     }
@@ -21,6 +23,13 @@ class Post extends Model
     public function subcategory()
     {
         return $this->belongsTo(Subcategory::class);
+    }
+
+
+    // relacion muchos a muchos
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 
 }

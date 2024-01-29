@@ -1,7 +1,7 @@
 <div>
     <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Sub - Areas') }}
+                {{ __('Etiquetas') }}
             </h2>
         </x-slot>
 
@@ -62,13 +62,13 @@
                             <path clip-rule="evenodd" fill-rule="evenodd"
                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                         </svg>
-                        Nueva Sub - Area
+                        Nueva Etiqueta
                     </button>
                 </div>
             </div>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-@if (count($categories))
+@if (count($tags))
 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
@@ -78,9 +78,8 @@
             <th scope="col" class="px-6 py-3">
                 NOMBRE
             </th>
-
             <th scope="col" class="px-6 py-3">
-                AREA
+                COLOR
             </th>
             
             <th scope="col" class="px-6 py-3">
@@ -90,7 +89,7 @@
     </thead>
     <tbody>
 
-        @foreach ($categories as $item)
+        @foreach ($tags as $item)
         <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{$item->id}}
@@ -98,19 +97,12 @@
             <td class="px-6 py-4">
                 {{$item->name}}
             </td>
-
             <td class="px-6 py-4">
-                {{$item->family->name}}
+                {{$item->color}}
             </td>
            
             <td class="px-6 py-4">
-              <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                
-              @if ($item->subcategories->count() == 0)
-              <a wire:click="delete({{ $item }})" href="#" wire:confirm="Estas seguro, !No podras Revertir Esta accion : Eliminar¡?" class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
-
-              @endif
-            
+                <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
             </td>
         </tr>
         @endforeach
@@ -120,9 +112,9 @@
 @else
                     <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningun registro encontrado</h6>
                 @endif
-                @if ($categories->hasPages())
+                @if ($tags->hasPages())
                 <div class="p-6">
-                    {{ $categories->links() }}
+                    {{ $tags->links() }}
 
                 </div>
             @endif
@@ -133,8 +125,8 @@
         </div>
 
 
-        <x-modal-form :head='$componentName="Sub - Areas"' :id='$selected_id'>
-            @include('livewire.admin.category-form')
+        <x-modal-form :head='$componentName="Etiquetas"' :id='$selected_id'>
+            @include('livewire.admin.tag-form')
         </x-modal-form> 
     
 </div>

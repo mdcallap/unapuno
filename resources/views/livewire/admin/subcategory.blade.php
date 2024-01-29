@@ -110,9 +110,14 @@
             <td class="px-6 py-4">
                 {{ $item->category->name }}
             </td>
-           
+          
             <td class="px-6 py-4">
                 <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                @if ($item->posts->count()==0 )
+                <a wire:click="delete({{ $item }})" wire:confirm="Estas seguro, !No podras Revertir Esta accion : Eliminar¡?"  href="#" class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
+
+                    
+                @endif
             </td>
         </tr>
         @endforeach

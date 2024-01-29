@@ -16,9 +16,10 @@ return new class extends Migration
 
             $table->string('title');
             $table->text('content');
+            $table->string('file')->nullable();
             
-            $table->enum('status', [0,1])->default(1);
-
+            $table->enum('status', [0,1])->default(0); // 0 = borrador, 1 = published
+            $table->enum('type', [0,1])->default(0); // 0 = NOticia, 1 = document
             $table->foreignId('user_id')->constrained();
 
             $table->foreignId('subcategory_id')->constrained();

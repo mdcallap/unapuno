@@ -25,6 +25,24 @@
                     <x-nav-link href="{{ route('admin.subcategories') }}" :active="request()->routeIs('admin.subcategories')">
                         {{ __('Items') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('admin.posts') }}" :active="request()->routeIs('admin.posts')">
+                        {{ __('Publicaiones') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.tags') }}" :active="request()->routeIs('admin.tags')">
+                        {{ __('Etiquetas') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.sliders') }}" :active="request()->routeIs('admin.sliders')">
+                        {{ __('Slider') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.videos') }}" :active="request()->routeIs('admin.videos')">
+                        {{ __('Videos') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.gallery') }}" :active="request()->routeIs('admin.gallery')">
+                        {{ __('Galeria') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('admin.contact') }}" :active="request()->routeIs('admin.contact')">
+                        {{ __('Contactos') }}
+                    </x-nav-link>
                 </div>
             </div>
 

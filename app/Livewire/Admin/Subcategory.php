@@ -97,6 +97,29 @@ class Subcategory extends Component
         $this->dispatch('success','Subcategoria creada con exito');
     }
 
+    public function update(){
+        $this->validate([
+            'subcategory.family_id'=>'required|exists:families,id',
+            'subcategory.category_id'=>'required|exists:categories,id',
+            'subcategory.name'=>'required|unique:subcategories,name,'.$this->selected_id,
+        ]);
+
+        $record=ModelsSubcategory::find($this->selected_id);
+
+        $record->update([
+            'category_id'=>$this->subcategory['category_id'],
+            'name'=>$this->subcategory['name'],
+        ]);
+
+        $this->closemodal();
+        $this->dispatch('success','Subcategoria actualizada con exito');
+    }
+
+    public function delete(ModelsSubcategory $subcategory){
+        $subcategory->delete();
+        $this->dispatch('success','Subcategoria eliminada con exito');
+    }
+
    
 
    
