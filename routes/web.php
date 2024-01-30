@@ -46,7 +46,9 @@ Route::get('/showgaleries', ShowGaleries::class)->name('web.gallery');
 
 Route::get('/nosotros',Feature::class)->name('web.feature');
 
-Route::get('/contacto',Contact::class)->name('web.contact');
+Route::get('/contactos',Contact::class)->name('web.contact');
+
+
 
 
 /* Route::get('/', Home::class)->name('web.home'); */
