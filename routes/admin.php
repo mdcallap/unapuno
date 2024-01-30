@@ -8,6 +8,7 @@ use App\Livewire\Admin\Post;
 use App\Livewire\Admin\Slider;
 use App\Livewire\Admin\Subcategory;
 use App\Livewire\Admin\Tag;
+use App\Livewire\Admin\User;
 use App\Livewire\Admin\Video;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,8 @@ Route::middleware([
     Route::get('/galeria',Gallery::class)->name('admin.gallery');
 
     Route::get('/contacto',ContactAdmin::class)->name('admin.contact');
+
+    Route::get('/users',User::class)->name('admin.users');
 
 
 

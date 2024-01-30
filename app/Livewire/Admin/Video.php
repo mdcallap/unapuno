@@ -37,6 +37,13 @@ class Video extends Component
 
     }
 
+    public function delete(ModelsVideo $video)
+    {
+        $video->delete();
+        
+
+    }
+
 
     public function closemodal()
     {   
