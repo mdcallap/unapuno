@@ -35,11 +35,12 @@
                 <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
                     <img src="{{asset('images/logo.png')}}" class="h-8" alt="Flowbite Logo" />
 
-                    SEGURIDAD Y SALUD EN EL TRABAJO    
+                    SUB UNIDAD DE SEGURIDAD Y SALUD EN EL TRABAJO - UNA PUNO    
                 </a>
-                <p class="my-6 text-gray-500 dark:text-gray-400">Open-source library of over 400+ web components and interactive elements built for better web.</p>
+                <p class="my-6 text-gray-500 dark:text-gray-400">Todos los derechos reservados</p>
               
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024-2025 <a href="#" class="hover:underline">UNA PUNO</a>. OTI</span>
+                <a href="{{ route('login') }}" class="hover:underline">Acceder</a>
             </div>
           </footer>
     </div>

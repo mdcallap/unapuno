@@ -26,7 +26,7 @@
                         {{ __('Items') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('admin.posts') }}" :active="request()->routeIs('admin.posts')">
-                        {{ __('Publicaiones') }}
+                        {{ __('Publicaciones') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('admin.tags') }}" :active="request()->routeIs('admin.tags')">
                         {{ __('Etiquetas') }}

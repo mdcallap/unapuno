@@ -1,19 +1,20 @@
 <section class="text-gray-600 body-font relative">
-    <h2 class="mb-8 text-2xl font-bold text-gray-900 text-center mt-7  dark:text-white">Contactos</h2>
+    <h2 class="mb-8 text-2xl font-bold text-gray-900 text-center mt-7  dark:text-white">Contáctanos</h2>
     <div class="container px-5 mx-auto flex sm:flex-nowrap flex-wrap">
         
       <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9129.824991349482!2d-70.01796755140475!3d-15.824054754958897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915d69babb63e6cf%3A0xf24057bf79de0852!2sUniversidad%20Nacional%20del%20Altiplano%20Puno!5e0!3m2!1ses!2spe!4v1706623411546!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9129.824991349482!2d-70.01796755140475!3d-15.824054754958897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915d69babb63e6cf%3A0xf24057bf79de0852!2sUniversidad%20Nacional%20del%20Altiplano%20Puno!5e0!3m2!1ses!2spe!4v1706623411546!5m2!1ses!2spe" style="filter: contrast(1.2) opacity(0.4);"></iframe>
         <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
           <div class="lg:w-1/2 px-6">
-            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">DIRECCION</h2>
-            <p class="mt-1">Universidad Nacional del Altiplano - Oficina de Segurdad y Salud en el Trabajo</p>
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">DIRECCIÓN</h2>
+            <p class="mt-1">Universidad Nacional del Altiplano - Sub Unidad de Seguridad y Salud en el Trabajo</p>
           </div>
           <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-            <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+            <a class="text-indigo-500 leading-relaxed">eaguilar@unap.edu.pe</a>
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">TELEFONO</h2>
-            <p class="leading-relaxed">123-456-789</p>
+            <p class="leading-relaxed">950 900 038 - 941 856 637</p>
           </div>
         </div>
       </div>
@@ -70,7 +71,7 @@
             <span class="text-red-500 text-xs italic">{{ $message }}</span>
             @enderror   
         </div>
-        <button  wire:click="send" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        <button  wire:click="send" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Enviar mensaje</button>
         <p class="text-xs text-gray-500 mt-3">No realice  spam y evite banneos</p>
       </div>
     </div>

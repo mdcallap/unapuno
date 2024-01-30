@@ -104,7 +104,7 @@
             </td>
            
             <td class="px-6 py-4">
-              <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+              <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
                 
               @if ($item->subcategories->count() == 0)
               <a wire:click="delete({{ $item }})" href="#" wire:confirm="Estas seguro, !No podras Revertir Esta accion : Eliminar¡?" class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>

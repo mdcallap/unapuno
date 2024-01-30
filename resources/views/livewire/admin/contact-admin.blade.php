@@ -70,7 +70,7 @@
 
                                             <a wire:click="view({{ $item }})" href="#"
                                                
-                                                class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Ver MEnsaje</a>
+                                                class="font-medium mx-3 text-blue-600 dark:text-blue-500 hover:underline">Ver Mensaje</a>
 
 
                                         </td>
@@ -84,7 +84,7 @@
                             </tbody>
                         </table>
                     @else
-                        <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningun registro encontrado</h6>
+                        <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningún registro encontrado</h6>
                     @endif
 
                 </div>

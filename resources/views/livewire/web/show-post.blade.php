@@ -7,13 +7,14 @@
             <header class="mb-4 lg:mb-6 not-format">
                 <address class="flex items-center mb-6 not-italic">
                     <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-                        <img class="mr-4 w-16 h-16 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
+                        <img class="mr-4 w-16 h-16 rounded-full" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->name}}">
                      
                         <div>
-                            <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ Auth::user()->name }}</a>
-                            <p class="text-base text-gray-500 dark:text-gray-400">Graphic Designer, educator & CEO Flowbite</p>
+                            <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->user->name}}</a>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Publicado:</p>
                             <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="2022-02-08" title="February 8th, 2022">{{$post->created_at}}</time></p>
-                        </div>
+                        </div>                    
+
                     </div>
                 </address>
                 <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">{{$post->title}}</h1>
@@ -21,13 +22,17 @@
            
             @if ($post->type==1 )
                 <embed src="{{asset('storage/'.$post->file)}}" class="w-full h-1/3" type="">
+
+                <br>
+                <button onclick="window.open('{{asset('storage/'.$post->file)}}', '_blank');" style="display: block; margin: 0 auto;" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Ver Documento</button>
+                <br>
             @else
             <figure class="mb-5"><img src="{{asset('storage/'.$post->file)}}" alt="">
             
             </figure>
             @endif
             
-            <h2>Getting started with Flowbite</h2>
+            <!--<h2>Contenido:</h2>-->
             <p>{{$post->content}}
             </p>
         </article>
@@ -36,7 +41,7 @@
   
   <aside aria-label="Related articles" class="py-8  bg-gray-50 dark:bg-gray-800">
     <div class="px-4 mx-auto max-w-screen-xl">
-        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Mas Publicaciones</h2>
+        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Más Publicaciones</h2>
         <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
             @foreach ($posts as $item)

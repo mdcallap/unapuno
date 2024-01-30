@@ -51,7 +51,7 @@
 
                                 </select>
                                 <span
-                                    class="text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">entradas</span>
+                                    class="text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Entradas</span>
 
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <path clip-rule="evenodd" fill-rule="evenodd"
                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                         </svg>
-                        Nueva Publicacion
+                        Nueva Publicación
                     </button>
                 </div>
             </div>
@@ -147,7 +147,7 @@
     </tbody>
 </table>
 @else
-                    <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningun registro encontrado</h6>
+                    <h6 class="text-center my-5 text-gray-900 dark:text-white">Ningún registro encontrado</h6>
                 @endif
                 @if ($posts->hasPages())
                 <div class="p-6">

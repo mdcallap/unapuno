@@ -50,7 +50,7 @@
 
                                 </select>
                                 <span
-                                    class="text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">entradas</span>
+                                    class="text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Entradas</span>
 
                             </div>
                         </div>
@@ -102,7 +102,7 @@
             </td>
            
             <td class="px-6 py-4">
-                <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <a wire:click="edit({{ $item }})" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
             </td>
         </tr>
         @endforeach

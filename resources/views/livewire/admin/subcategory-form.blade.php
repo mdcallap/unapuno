@@ -31,7 +31,7 @@
                       @endforeach
                                                 
                 </select> 
-                @dump($subcategory)
+                {{--@dump($subcategory)--}}
                 
                 @error('subcategory.category_id')
                     <h1 class="text-red-500">{{$message}}</h1>
@@ -54,7 +54,7 @@
      
         
 
-@dump($this->categories)
+{{--@dump($this->categories)--}}
 
         
 </div>
