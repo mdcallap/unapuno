@@ -20,7 +20,7 @@ class Contact extends Component
         $rules = [
             'name' => 'required|min:6',
             'email' => 'required|email',
-            'phone' => 'required|min:10',
+            'phone' => 'required|min:9',
             'message' => 'required|min:10'
 
         ];
