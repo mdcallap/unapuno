@@ -3,7 +3,7 @@
 
   <div class="mb-4" >
 
-    <x-label class="block text-sm font-medium text-gray-700 mb-2">Familias: </x-label>
+    <x-label class="block text-sm font-medium text-gray-700 mb-2">Área: </x-label>
 
               <select  wire:model.live="subcategory.family_id" class="w-full border-gray-300 mr-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                   <option value="" disabled>Seleccione...</option>
@@ -21,7 +21,7 @@
 
     <div class="mb-4" >
 
-      <x-label class="block text-sm font-medium h- text-gray-700 mb-2">Categoria  </x-label>
+      <x-label class="block text-sm font-medium h- text-gray-700 mb-2">Sub Área: </x-label>
 
                 <select  wire:model.live="subcategory.category_id" class="w-full border-gray-300 mr-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                     <option value="" disabled>Seleccione...</option>
@@ -40,7 +40,7 @@
 
        <div >
         <x-label for="name" class="mb-2" >
-          Nombre
+          Nombre:
         </x-label>
         <x-input wire:model="subcategory.name" type="text" id="name"  class="w-full"/>
             @error('subcategory.name')

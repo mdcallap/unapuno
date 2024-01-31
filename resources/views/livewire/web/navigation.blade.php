@@ -27,7 +27,7 @@
 
 
                     <li>
-                        <button id="multiLevelArea1" data-dropdown-toggle="multi-dropdown-area1"
+                        <button id="multiLevelArea1" data-dropdown-toggle="multi-dropdown-area1" data-dropdown-trigger="hover"
                             class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">   S. U. de Seguridad y Salud en el Trabajo</button>
 
 
@@ -40,7 +40,7 @@
                             
                                 @foreach ($categories->where('family_id', 1) as $item)
                                 <li>
-                                    <button id="doubleDropdownButtonArea{{$item->id}}" data-dropdown-toggle="doubleDropdownArea{{$item->id}}"
+                                    <button id="doubleDropdownButtonArea{{$item->id}}" data-dropdown-toggle="doubleDropdownArea{{$item->id}}" data-dropdown-trigger="hover"
                                         data-dropdown-placement="right-start" type="button"
                                         class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{$item->name}}<svg
                                             class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true"
@@ -78,7 +78,7 @@
                     </li>
 
                     <li>
-                        <button id="multiLevelArea2" data-dropdown-toggle="multi-dropdown-area2"
+                        <button id="multiLevelArea2" data-dropdown-toggle="multi-dropdown-area2" data-dropdown-trigger="hover"
                             class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">   Sistema de Gestión de Riesgos</button>
 
 
@@ -91,7 +91,7 @@
                             
                                 @foreach ($categories->where('family_id', 2) as $item)
                                 <li>
-                                    <button id="doubleDropdownButtonArea{{$item->id}}" data-dropdown-toggle="doubleDropdownArea{{$item->id}}"
+                                    <button id="doubleDropdownButtonArea{{$item->id}}" data-dropdown-toggle="doubleDropdownArea{{$item->id}}" data-dropdown-trigger="hover"
                                         data-dropdown-placement="right-start" type="button"
                                         class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{$item->name}}<svg
                                             class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true"

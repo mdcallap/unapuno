@@ -37,10 +37,11 @@
 
                     SUB UNIDAD DE SEGURIDAD Y SALUD EN EL TRABAJO - UNA PUNO    
                 </a>
+                
                 <p class="my-6 text-gray-500 dark:text-gray-400">Todos los derechos reservados</p>
               
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024-2025 <a href="#" class="hover:underline">UNA PUNO</a>. OTI</span>
-                <a href="{{ route('login') }}" class="hover:underline">Acceder</a>
+                
             </div>
           </footer>
     </div>

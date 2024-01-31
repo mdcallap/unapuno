@@ -1,4 +1,4 @@
-<div>
+<div class="text-justify">
 
 
     <div id="default-carousel" class="relative w-full  z-0" data-carousel="slide">
@@ -139,7 +139,7 @@
                         </div>
                         <div class="group relative">
                             <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                <a href="#">
+                                <a href="{{route('web.show.post',$post->id)}}">
                                     <span class="absolute inset-0"></span>
                                     {{$post->title}}
                                 </a>
@@ -182,7 +182,7 @@
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Cuidando cada paso, protegiendo cada vida: UNA Puno.
             </p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                <a href="#"
+                {{--<a href="#"
                     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-900">
                     Ver mas
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +190,7 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
-                </a>
+                </a>--}}
                
             </div>
         </div>
@@ -313,8 +313,8 @@
                         <div
                             class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
 
-                            <a href="https://www.contraloria.gob.pe/">
-                                <img src="images/contraloria.png" class="img-fluid" alt="">
+                            <a href="https://www.gob.pe/">
+                                <img src="images/gob_pe.png" class="img-fluid" alt="">
                             </a>
 
                             <!--<a href="https://www.contraloria.gob.pe/" class="flex justify-center items-center">
@@ -326,8 +326,8 @@
                                 </svg>
                             </a>-->
 
-                            <a href="https://www.gob.pe/">
-                                <img src="images/gob.png" class="img-fluid" alt="">
+                            <a href="https://www.portal.unap.edu.pe/">
+                                <img src="images/unap.jpg" class="img-fluid" alt="">
                             </a>
 
 
@@ -340,8 +340,8 @@
                                 </svg>
                             </a>-->
 
-                            <a href="https://www.bn.com.pe/">
-                                <img src="images/logo-banco-nacion.png" class="img-fluid" alt="">
+                            <a href="https://www.gob.pe/minedu">
+                                <img src="images/Minedu-logo.png" class="img-fluid" alt="">
                             </a>
 
                             <!--<a href="#" class="flex justify-center items-center">
@@ -361,8 +361,8 @@
                                 </svg>
                             </a>-->
 
-                            <a href="https://www.reniec.gob.pe/">
-                                <img src="images/reniec.png" class="img-fluid" alt="">
+                            <a href="https://www.sunedu.gob.pe/procedimiento-de-reconocimiento-de-grados-y-titulos-extranjeros/">
+                                <img src="images/sunedu.jpg" class="img-fluid" alt="">
                             </a>
 
                             <!--<a href="#" class="flex justify-center items-center">
@@ -374,8 +374,8 @@
                                 </svg>
                             </a>-->
 
-                            <a href="https://www.gob.pe/sunarp">
-                                <img src="images/sunarp.png" class="img-fluid" alt="">
+                            <a href="https://www.gob.pe/institucion/servir/informes-publicaciones/3572362-normatividad-relacionada-a-la-seguridad-y-salud-en-el-trabajo-sst">
+                                <img src="images/logo.png" class="img-fluid" alt="">
                             </a>
 
                             <!--<a href="#" class="flex justify-center items-center">

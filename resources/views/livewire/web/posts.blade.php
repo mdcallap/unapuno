@@ -1,10 +1,10 @@
 
 
-   
+   <div>
       
     <aside aria-label="Related articles" class="py-8  bg-gray-50 dark:bg-gray-800">
-        <div class="px-4 mx-auto max-w-screen-xl">
-            <h2 class="mb-8 text-2xl font-bold text-gray-900 text-center  dark:text-white">Todos Las Publicaciones:</h2>
+        <div class="text-justify px-4 mx-auto max-w-screen-xl">
+            <h2 class="mb-8 text-2xl font-bold text-gray-900 text-center  dark:text-white">Todas Las Publicaciones:</h2>
             <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
     
                 @foreach ($posts as $item)

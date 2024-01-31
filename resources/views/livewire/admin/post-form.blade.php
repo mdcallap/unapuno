@@ -50,7 +50,7 @@
 
                     <div class="mb-4" >
 
-                      <x-label class="block text-sm font-medium text-gray-700 mb-2">Categoria: </x-label>
+                      <x-label class="block text-sm font-medium text-gray-700 mb-2">Item: </x-label>
       
                                 <select  wire:model="subcategory_id"class="w-full border-gray-300 mr-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                     <option value=""  disabled>Seleccione...</option>
@@ -141,9 +141,6 @@
                   
                         @endif
 
-                        
-
-
 
              {{--  <div class="mb-4" >
 
@@ -164,16 +161,7 @@
                         @enderror
                 </div> --}}
 
-                
-               
-            
-
-             
-                
-  
-
-  
-                
+                           
 </div>
       
           
