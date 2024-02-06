@@ -41,7 +41,7 @@
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Presidente</h3>
 
-                        <p>Presidente de la Sub Unidad de Seguridad y Salud en el Trabajo</p>
+                        <p>Presidente del Comité de Seguridad y Salud en el Trabajo - UNA Puno </p>
                         <br>
                         <p class="flex items-center text-gray-500 dark:text-gray-400">
                             <img src="{{asset('images/photos/newton.jpg')}}" alt="Icono" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 50px; float: left; border: 2px solid black;">
@@ -69,7 +69,7 @@
         
                         <br>
                         <p class="flex items-center text-gray-500 dark:text-gray-400">
-                            <img src="{{asset('images/logo.png')}}" alt="Icono" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 50px; float: left; border: 2px solid black;">
+                            <img src="{{asset('images/photos/maria.jpeg')}}" alt="Icono" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 50px; float: left; border: 2px solid black;">
                             M.Sc. Maria Antonia Quispe Collatupa
                         </p>
 
