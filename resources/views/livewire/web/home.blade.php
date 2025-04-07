@@ -138,7 +138,7 @@
                         <div class="flex items-center gap-x-4 text-xs">
                             @foreach ($post->tags as $itemx)
                             <a href="#"
-                            class="relative z-10 rounded-full bg-{{$itemx->color}}-100 p-1 font-medium text-{{$itemx->color}}-600 hover:bg-{{$item->color}}-200">{{$item->name}}</a>
+                            class="relative z-10 rounded-full bg-{{$itemx->color}}-100 p-1 font-medium text-{{$itemx->color}}-600 hover:bg-{{$itemx->color}}-200">{{$itemx->name}}</a>
                             @endforeach
                            
                         </div>
