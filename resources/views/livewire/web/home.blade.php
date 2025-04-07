@@ -1,13 +1,13 @@
 <div class="text-justify">
 
-
     <div id="default-carousel" class="relative w-full  z-0" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
             @foreach ($sliders as $item)
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/' . $item->image) }}"
+          
+                        <img src="{{ Storage::url($item->image) }}"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             @endforeach
@@ -49,7 +49,12 @@
             </span>
         </button>
     </div>
+    
+  {{--   @foreach ($sliders as $item)
+    <img src="{{ Storage::url($item->image) }}" alt="Imagen">
 
+    @endforeach --}}
+   
 
     <section class="text-gray-600 bg-white body-font">
         <div class="container px-5 pb-24 mx-auto">

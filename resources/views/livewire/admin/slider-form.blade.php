@@ -31,8 +31,6 @@
     </x-label>
     @if ($image) 
     <img src="{{ $image->temporaryUrl() }}">
-
-    
     @endif
 
 

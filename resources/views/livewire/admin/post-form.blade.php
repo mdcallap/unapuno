@@ -127,11 +127,11 @@
                             @enderror
                         </div>
 
-
+{{-- 
                         @if ($file && $type==0) 
                         <img src="{{ $file->temporaryUrl() }}">
                  
-                        
+                
                         @endif
 
                         @if ($doc )
@@ -139,7 +139,7 @@
                        
            
                   
-                        @endif
+                        @endif --}}
 
 
              {{--  <div class="mb-4" >

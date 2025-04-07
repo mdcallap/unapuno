@@ -61,17 +61,15 @@ class Post extends Component
             'subcategory_id'=>'required',
             'type'=>'required',
             'selectedTags'=>'required',
-
-
-
-            
         ];
         if($this->type==1){
             $rules['file']='mimes:pdf,docx,xlsx,pptx,txt,zip,rar';
 
+        }else{
+            $rules['file']='required|mimes:jpg,jpeg,png';
         }
 
-
+        
 
         $this->validate($rules);
         
@@ -80,7 +78,7 @@ class Post extends Component
             'type'=>$this->type,
             'title'=>$this->title,
             'content'=>$this->content,
-            
+            'file'=>$this->file->store('posts'),
             'status'=>$this->status,
             'subcategory_id'=>$this->subcategory_id,
             'user_id'=>auth()->user()->id,
@@ -88,10 +86,12 @@ class Post extends Component
         ]);
         $post->tags()->attach($this->selectedTags);
 
-        if($this->file){
+     /*    dd($post); */
+
+      /*   if($this->file){
             $post->file=$this->file->store('posts');
             $post->save();
-        }
+        } */
         $this->reset();
         $this->filekey = rand();
 
