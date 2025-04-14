@@ -94,10 +94,23 @@
     </div>
 
 
-
-
+    <x-dialog-modal wire:model="modal" >
+    <x-slot:title >
+        VER DATOS
+    </x-slot:title>
+    <x-slot:content>
+         @include('livewire.admin.contact-form')
+    </x-slot:content>
+    <x-slot:footer>
+        <x-secondary-button wire:click="closemodal" wire:loading.attr="disabled">
+            Cancelar
+        </x-secondary-button>
+    
+    </x-slot:footer>
+   </x-dialog-modal>
+<!-- 
     <x-modal-form :head="$componentName = 'Contacto'" :id='$selected_id'>
         @include('livewire.admin.contact-form')
-    </x-modal-form>
+    </x-modal-form> -->
 
 </div>
