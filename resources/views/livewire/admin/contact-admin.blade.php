@@ -108,9 +108,6 @@
     
     </x-slot:footer>
    </x-dialog-modal>
-<!-- 
-    <x-modal-form :head="$componentName = 'Contacto'" :id='$selected_id'>
-        @include('livewire.admin.contact-form')
-    </x-modal-form> -->
+
 
 </div>
